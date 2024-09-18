@@ -36,7 +36,7 @@ Nello styles.css aggiungere
 ```
 
 ## Daisy UI
-è un bootstrap per tailwind
+è un bootstrap per tailwind https://daisyui.com
 ```
 npm i -D daisyui@latest
 ```
