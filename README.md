@@ -57,3 +57,11 @@ module.exports = {
 }
 ```
 
+## Ngrx
+### Installazione 
+```
+ng add @ngrx/store@latest
+ng add @ngrx/store-devtools@latest @ngrx/effects
+```
+
+
