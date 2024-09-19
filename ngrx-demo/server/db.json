@@ -1,10 +1,10 @@
 {
-    "category": [
-        "wood",
-        "plastic",
-        "paper"
-    ],
-    "products": [
+  "category": [
+    "wood",
+    "plastic",
+    "paper"
+  ],
+  "products": [
     {
       "id": 1,
       "name": "GitHub #1",
@@ -46,6 +46,72 @@
       "cost": 5.99,
       "image": "https://res.cloudinary.com/my-notes-demo/image/upload/v1712217750/tutorial-content/video-corsi/ngrx/image-keychains/tape.jpg",
       "type": "wood"
+    }
+  ],
+  "orders": [
+    {
+      "user": {
+        "email": "test@email.it",
+        "address": "via test",
+        "city": "Milan",
+        "state": "MI",
+        "zip": "1000"
+      },
+      "cart": [
+        {
+          "product": {
+            "id": 3,
+            "name": "Angular",
+            "cost": 8,
+            "image": "https://res.cloudinary.com/my-notes-demo/image/upload/v1712217745/tutorial-content/video-corsi/ngrx/image-keychains/keychain-small.jpg",
+            "type": "wood"
+          },
+          "qty": 2
+        },
+        {
+          "product": {
+            "id": 2,
+            "name": "React",
+            "cost": 7,
+            "image": "https://res.cloudinary.com/my-notes-demo/image/upload/v1712217747/tutorial-content/video-corsi/ngrx/image-keychains/poly-mailers.jpg",
+            "type": "wood"
+          },
+          "qty": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "user": {
+        "email": "test2@test.it",
+        "address": "test",
+        "city": "Rome",
+        "state": "RM",
+        "zip": "100"
+      },
+      "cart": [
+        {
+          "product": {
+            "id": 3,
+            "name": "Angular",
+            "cost": 8,
+            "image": "https://res.cloudinary.com/my-notes-demo/image/upload/v1712217745/tutorial-content/video-corsi/ngrx/image-keychains/keychain-small.jpg",
+            "type": "wood"
+          },
+          "qty": 2
+        },
+        {
+          "product": {
+            "id": 2,
+            "name": "React",
+            "cost": 7,
+            "image": "https://res.cloudinary.com/my-notes-demo/image/upload/v1712217747/tutorial-content/video-corsi/ngrx/image-keychains/poly-mailers.jpg",
+            "type": "wood"
+          },
+          "qty": 1
+        }
+      ],
+      "id": 2
     }
   ]
 }

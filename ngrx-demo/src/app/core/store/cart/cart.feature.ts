@@ -68,7 +68,11 @@ export const cartFeature = createFeature({
         ...state,
         list: state.list.filter(item => item.product.id !== action.id)
       }
-    })
+    }),
+    on(CartActions.clear, (state): CartState => ({
+      ...state,
+      list: []
+    }))
   ),
   extraSelectors: ({ selectList }) => ({
     selectIsCartEmpty: createSelector(

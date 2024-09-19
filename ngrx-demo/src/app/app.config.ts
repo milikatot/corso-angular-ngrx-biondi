@@ -10,6 +10,9 @@ import { provideHttpClient } from '@angular/common/http';
 import { productsFeature } from './core/store/products/products.feature';
 import { cartFeature } from './core/store/cart/cart.feature';
 import * as cartEffects from './core/store/cart/cart.effects';
+import { shopFiltersFeature } from './core/store/shop/shop-filters.feature';
+import { UIFeature } from './core/store/ui/ui.feature';
+import * as orderEffects from './core/store/cart/order.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,7 +22,12 @@ export const appConfig: ApplicationConfig = {
     provideStore(),
     provideState(productsFeature),
     provideState(cartFeature),
+    provideState(shopFiltersFeature),
+    provideState(UIFeature),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
-    provideEffects([productsEffects, cartEffects])
+    provideEffects([
+      productsEffects, 
+      cartEffects,
+      orderEffects])
 ]
 };

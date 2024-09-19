@@ -1,13 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { selectTotalCartItems, selectTotalCartCost, selectIsCartEmpty, selectList } from '../../core/store/cart/cart.feature';
-import { Product } from '../../model/product';
 import { CartActions } from '../../core/store/cart/cart.actions';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   template: `
 
      @if(isCartEmpty()) {
@@ -44,8 +44,15 @@ import { CartActions } from '../../core/store/cart/cart.actions';
         </table>
       </div>
 
-      <div class="text-xl my-6 font-bold">
-        total:  € {{totalCost()}}
+      <div class="flex justify-between my-6 py-6 border-t border-slate-600">
+        <div class="text-3xl my-6 font-bold">
+          total: € {{ totalCost() }}
+        </div>
+        <div>
+          <button class="btn btn-lg btn-info" routerLink="/order-form">
+            Proceed
+          </button>
+        </div>
       </div>
     }
   `,

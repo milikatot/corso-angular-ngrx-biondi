@@ -51,3 +51,17 @@ export const loadCartFromLocalStorage = createEffect((
   },
   { functional: true}
 );
+
+
+export const clearCartLocalStorage = createEffect((
+  actions$ = inject(Actions),
+) => {
+  return actions$.pipe(
+    ofType(CartActions.clear),
+    tap(() => {
+      localStorage.removeItem('cartList')
+    })
+  );
+},
+{ functional: true, dispatch: false}
+);
